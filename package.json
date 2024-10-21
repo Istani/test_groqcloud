@@ -1,7 +1,20 @@
 {
-  "name": "groq-cloud.ai",
+  "name": "@istani/groq-cloud.ai",
   "version": "0.0.0",
+  "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js",
+    "test": "node app.js"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "../../node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "groq-sdk": "^0.7.0"
   }
 }
