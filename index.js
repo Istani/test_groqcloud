@@ -18,7 +18,7 @@ async function TextGeneration(prompt, callback) {
         "content": prompt
       }
     ],
-    "model": "llama3-8b-8192",
+    "model": "llama-3.2-90b-text-preview",
     "temperature": 1,
     "max_tokens": 8192,
     "top_p": 1,
