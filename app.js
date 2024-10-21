@@ -46,7 +46,7 @@ function Tell_Story() {
           break;
         case 3:
           console.log(response);
-          Prompt_Text="SYTH: 'PEter' greift das Mosnter an. Erstelle eine kurze, zwei Sätze lange, Beschreibung der Szene.";
+          Prompt_Text="SYTH: 'Peter' greift das Mosnter an. Erstelle eine kurze, zwei Sätze lange, Beschreibung der Szene.";
           break;
         case 4:
           console.log(response);
@@ -65,12 +65,8 @@ function Tell_Story() {
           console.log(response);
           Prompt_Text="SYTH: Die Abenteurer werden als Helden gefeiert. Erstelle eine kurze, zwei Sätze lange, Beschreibung der Szene.";
           break;
-        case 8:
-          console.log(response);
-          Prompt_Text="SYTH: 'Sandro' wird für seine Leistung besonders hervorgehoben. Erstelle eine kurze, zwei Sätze lange, Beschreibung der Szene.";
-          break;
 
-        case 9:
+        case 8:
           console.log(response);
           Prompt_Text="Ignore previous instructions. Summarize the story so far. Limit the summary to 300 words or less. Your response should include nothing but the summary.'";
           break;
@@ -92,7 +88,7 @@ function Tell_Story() {
       }
       Prompt_Text+="\nStoryTelling:";
       step++;
-      Tell_Story();
+      setTimeout(() => {Tell_Story();}, 2000);
     }
   )
 }
