@@ -42,6 +42,7 @@ async function TextGeneration(prompt, callback) {
 }
 // Funktion zum starten der image generation
 async function ImageGeneration(prompt, callback) {
+  debug.error("AI Without Image Generation!");
   callback("");
 }
 
