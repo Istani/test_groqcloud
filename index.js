@@ -10,9 +10,6 @@ async function sleep(time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-
-// Todo: Irgendwas mit Datenbank damit die Generation nicht verschwindet und gleichzeitig den Callback ersetzen?
-
 // Funktion zum starten der text generation
 async function TextGeneration(prompt, callback) {
   try {
