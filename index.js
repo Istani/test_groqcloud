@@ -13,6 +13,7 @@ async function sleep(time) {
 // Funktion zum starten der text generation
 async function TextGeneration(prompt, callback) {
   try {
+    //console.log("P:" + JSON.stringify(prompt));
     const chatCompletion = await groq.chat.completions.create({
       "messages": [
         {
@@ -20,7 +21,8 @@ async function TextGeneration(prompt, callback) {
           "content": prompt
         }
       ],
-      "model": "llama-3.2-90b-text-preview",
+      //"model": "llama-3.2-90b-text-preview",
+      "model": "gemma2-9b-it",
       "temperature": 1,
       "max_tokens": 8192,
       "top_p": 1,
@@ -29,7 +31,7 @@ async function TextGeneration(prompt, callback) {
     });
   
     //console.log(chatCompletion.choices[0].message.content);
-    callback(chatCompletion.choices[0].message.content);
+    callback(chatCompletion.choices[0].message.content.replaceAll("\n",""));
   }
   catch (E) {
     debug.error(JSON.stringify(E));
